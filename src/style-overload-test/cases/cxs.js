@@ -9,7 +9,5 @@ export const cxsCase = (caseName) => {
 
     const { css } = cxs;
 
-    cxs.reset();
-
     return renderHtml(css, html);
 };

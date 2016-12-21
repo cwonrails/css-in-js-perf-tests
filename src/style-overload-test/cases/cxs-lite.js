@@ -9,7 +9,5 @@ export const cxsLiteCase = (caseName) => {
 
     const css = cxs.css();
 
-    cxs.reset();
-
     return renderHtml(css, html);
 };
