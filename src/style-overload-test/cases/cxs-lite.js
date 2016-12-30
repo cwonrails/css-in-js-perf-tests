@@ -7,7 +7,7 @@ export const cxsLiteCase = (caseName) => {
 
     const html = renderBody(caseName, cxs(containerStyle), getButtonClassName);
 
-    const css = cxs.css();
+    const css = cxs.getCss();
 
     return renderHtml(css, html);
 };

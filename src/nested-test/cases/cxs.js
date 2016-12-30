@@ -5,7 +5,7 @@ import { renderHtml, renderBody } from '../render';
 export const cxsCase = (caseName) => {
     const html = renderBody(caseName, cxs(createContainerStyle()), cxs(createButtonStyle()));
 
-    const css = cxs.css();
+    const css = cxs.getCss();
 
     return renderHtml(css, html);
 };
