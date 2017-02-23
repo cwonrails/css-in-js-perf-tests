@@ -7,7 +7,7 @@ export const cxsCase = (caseName) => {
 
     const html = renderBody(caseName, cxs(containerStyle), getButtonClassName);
 
-    const { css } = cxs;
+    const css = cxs.getCss();
 
     cxs.reset();
 

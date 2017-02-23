@@ -1,11 +1,11 @@
-import cxs from 'cxs/optimized';
+import cxs from 'cxs/lite';
 import { containerStyle, buttonStyle, notUsedStyle } from '../styles';
 import { renderHtml, renderBody } from '../render';
 
-export const cxsOptimizedCase = (caseName) => {
+export const cxsLiteCase = (caseName) => {
     const html = renderBody(caseName, cxs(containerStyle), cxs(buttonStyle), cxs(notUsedStyle));
 
-    const { css } = cxs;
+    const css = cxs.getCss();
 
     cxs.reset();
 

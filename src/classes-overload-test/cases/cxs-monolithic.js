@@ -1,13 +1,13 @@
-import cxs from 'cxs/optimized';
+import cxs from 'cxs/monolithic';
 import { containerStyle, buttonStyles } from '../styles';
 import { renderHtml, renderBody } from '../render';
 
-export const cxsOptimizedCase = (caseName) => {
+export const cxsMonolithicCase = (caseName) => {
     const getButtonClassName = i => cxs(buttonStyles[i]);
 
     const html = renderBody(caseName, cxs(containerStyle), getButtonClassName);
 
-    const { css } = cxs;
+    const css = cxs.getCss();
 
     cxs.reset();
 
